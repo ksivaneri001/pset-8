@@ -51,15 +51,15 @@ h2 {
 }
 
 .square:hover {
-  /* background-color: lightgray; */
-  background-color: orange;
+  background-image: url("../images/elon.png");
+  background-size: cover;
   cursor: pointer;
 }
 
 #reset-button {
   background-image: url("../images/wood-texture.jpg");
   background-size: cover;
-  border: 1px solid black;
+  border: 3px solid black;
   color: white;
   font-size: 21px;
   line-height: 55px;
@@ -71,4 +71,8 @@ h2 {
 #reset-button:hover {
   border-color: lightgray;
   cursor: pointer;
+}
+
+#reset-button:active {
+  transform: scale(0.99);
 }
