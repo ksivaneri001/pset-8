@@ -14,9 +14,9 @@ const winningConditions = [
 let board;
 let turn;
 let win;
-let xWins;
-let oWins;
-let ties;
+let xWins = 0;
+let oWins = 0;
+let ties = 0;
 let starter = "X";
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
@@ -28,6 +28,7 @@ window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
 document.getElementById("change-order-button").onclick = changeOrder;
+document.getElementById("reset-score-button").onclick = resetScore;
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
@@ -61,6 +62,18 @@ function takeTurn(e) {
         board[index] = turn;
         turn = turn === "X" ? "O" : "X";
         win = getWinner();
+        if (win === "X") {
+            xWins++;
+            document.getElementById("x-wins").innerHTML = xWins;
+        }
+        else if (win === "O") {
+            oWins++;
+            document.getElementById("o-wins").innerHTML = oWins;
+        }
+        else if (win === "T") {
+            ties++;
+            document.getElementById("ties").innerHTML = ties;
+        }
 
         render();
         }
@@ -95,4 +108,14 @@ function changeOrder() {
     }
     document.getElementById("change-order-button").innerHTML = starter;
     render();
+}
+
+function resetScore() {
+    xWins = 0;
+    oWins = 0;
+    ties = 0;
+
+    document.getElementById("x-wins").innerHTML = xWins;
+    document.getElementById("o-wins").innerHTML = oWins;
+    document.getElementById("ties").innerHTML = ties;
 }
