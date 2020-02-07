@@ -14,11 +14,25 @@ h1 {
   margin: 2%;
 }
 
-h2 {
+h2, h3 {
   font-size: 36px;
   font-weight: lighter;
   color: black;
   margin: 2%;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid gray;
+    background-image: url("../images/wood-texture.jpg");
+    background-size: cover;
+    height: 30px;
+    width: 25%
 }
 
 .container {
@@ -65,14 +79,29 @@ h2 {
   line-height: 55px;
   margin: 1%;
   text-align: center;
-  width: 456px;
+  width: 35%;
 }
 
-#reset-button:hover {
+#change-order-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    background-image: url("../images/wood-texture.jpg");
+    background-size: cover;
+    border: 3px solid black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    width: 75px;
+    height: 75px;
+}
+
+#reset-button:hover, #change-order-button:hover {
   border-color: lightgray;
   cursor: pointer;
 }
 
-#reset-button:active {
+#reset-button:active, #change-order-button:active {
   transform: scale(0.99);
 }
