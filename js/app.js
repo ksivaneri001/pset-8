@@ -22,6 +22,7 @@ let starter = "X";
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");   // grab the subheader
+const victoryAudio = document.getElementById("victory-audio");
 
 ///////////////////// EVENT LISTENERS ///////////////////////////////
 window.onload = init;
@@ -42,6 +43,8 @@ function init() {
     win = null;
 
     render();
+    victoryAudio.pause();
+    victoryAudio.currentTime = 0;
 }
 
 function render() {
@@ -65,10 +68,12 @@ function takeTurn(e) {
         if (win === "X") {
             xWins++;
             document.getElementById("x-wins").innerHTML = xWins;
+            victoryAudio.play();
         }
         else if (win === "O") {
             oWins++;
             document.getElementById("o-wins").innerHTML = oWins;
+            victoryAudio.play();
         }
         else if (win === "T") {
             ties++;
