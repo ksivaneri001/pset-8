@@ -58,6 +58,7 @@ function render() {
     message.textContent = win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
 }
 
+// Runs after each turn
 function takeTurn(e) {
     if (!win) {
         let index = squares.findIndex(function(square) {
