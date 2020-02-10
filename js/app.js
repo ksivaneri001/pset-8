@@ -23,6 +23,7 @@ let starter = "X";
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");   // grab the subheader
 const victoryAudio = document.getElementById("victory-audio");   // grab the victory audio
+const tieAudio = document.getElementById("tie-audio");   // grab the tie audio
 
 ///////////////////// EVENT LISTENERS ///////////////////////////////
 window.onload = init;
@@ -82,6 +83,7 @@ function takeTurn(e) {
         else if (win === "T") {
             ties++;
             document.getElementById("ties").innerHTML = ties;
+            tieAudio.play();
         }
 
         render();
