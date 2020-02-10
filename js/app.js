@@ -119,6 +119,7 @@ function changeOrder() {
     render();
 }
 
+// Resets scoreboard
 function resetScore() {
     xWins = 0;
     oWins = 0;
