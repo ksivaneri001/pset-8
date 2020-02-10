@@ -89,6 +89,7 @@ function takeTurn(e) {
     }
 }
 
+// Checks if player has won
 function getWinner() {
     let winner = null;
 
