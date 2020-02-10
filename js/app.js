@@ -106,6 +106,7 @@ function getWinner() {
     return winner ? winner : board.includes("") ? null : "T";
 }
 
+// Changes who goes first
 function changeOrder() {
     if (starter === "X") {
         starter = "O";
