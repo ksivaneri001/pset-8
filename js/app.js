@@ -32,6 +32,8 @@ document.getElementById("change-order-button").onclick = changeOrder;
 document.getElementById("reset-score-button").onclick = resetScore;
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
+
+// Starts new game
 function init() {
     board = [
         "", "", "",
