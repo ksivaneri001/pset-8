@@ -39,7 +39,7 @@ function init() {
         "", "", ""
     ];
 
-    turn = "X";
+    turn = starter;
     win = null;
 
     render();
@@ -102,16 +102,14 @@ function getWinner() {
 }
 
 function changeOrder() {
-    init();
     if (starter === "X") {
-        turn = "O";
         starter = "O";
     }
     else {
-        turn = "X";
         starter = "X"
     }
     document.getElementById("change-order-button").innerHTML = starter;
+    init();
     render();
 }
 
