@@ -22,7 +22,7 @@ let starter = "X";
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");   // grab the subheader
-const victoryAudio = document.getElementById("victory-audio");
+const victoryAudio = document.getElementById("victory-audio");   // grab the victory audio
 
 ///////////////////// EVENT LISTENERS ///////////////////////////////
 window.onload = init;
