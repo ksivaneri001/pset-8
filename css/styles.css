@@ -35,6 +35,12 @@ th, td {
     width: 25%
 }
 
+.audio-warning {
+    font-size: 18px;
+    color: black;
+    margin: 2%;
+}
+
 .container {
   display: flex;
   justify-content: center;
